@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  authenticated :user do
+    root 'expenses#index', as: :authenticated_root
+  end
 
   root "splash#index"
 
