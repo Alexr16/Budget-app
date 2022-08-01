@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+#Users
+user1 = User.create(name: "jorge", email: "jorge@hotmail.com", password: "123456")
+#Category
+category1 = Group.create(name: 'House', icon: 'noto:house-with-garden', author_id: user1.id)
+#Expenses
+expense1 = Expense.create(name: "Rent", amount: 1000, author_id: user1.id, group_id: category1.id)
+
