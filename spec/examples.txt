@@ -1,11 +1,15 @@
 example_id                               | status  | run_time        |
 ---------------------------------------- | ------- | --------------- |
-./spec/models/expense_spec.rb[1:1]       | pending | 0.00002 seconds |
+./spec/models/expense_spec.rb[1:1]       | pending | 0.00001 seconds |
 ./spec/models/group_expense_spec.rb[1:1] | pending | 0.00002 seconds |
-./spec/models/group_spec.rb[1:1]         | pending | 0.00001 seconds |
-./spec/models/user_spec.rb[1:1]          | pending | 0.00001 seconds |
-./spec/views/splah_index_spec.rb[1:1:1]  | passed  | 0.41629 seconds |
-./spec/views/splah_index_spec.rb[1:1:2]  | passed  | 3.22 seconds    |
-./spec/views/splah_index_spec.rb[1:1:3]  | passed  | 0.38755 seconds |
-./spec/views/splah_index_spec.rb[1:1:4]  | passed  | 0.50413 seconds |
-./spec/views/splah_index_spec.rb[1:1:5]  | passed  | 0.5234 seconds  |
+./spec/models/group_spec.rb[1:1]         | pending | 0.00003 seconds |
+./spec/models/user_spec.rb[1:1]          | pending | 0.00002 seconds |
+./spec/views/group_index_spec.rb[1:1:1]  | passed  | 0.61331 seconds |
+./spec/views/group_index_spec.rb[1:1:2]  | passed  | 0.59833 seconds |
+./spec/views/group_index_spec.rb[1:1:3]  | passed  | 0.69404 seconds |
+./spec/views/group_index_spec.rb[1:1:4]  | passed  | 0.67556 seconds |
+./spec/views/splah_index_spec.rb[1:1:1]  | passed  | 0.47052 seconds |
+./spec/views/splah_index_spec.rb[1:1:2]  | passed  | 0.40015 seconds |
+./spec/views/splah_index_spec.rb[1:1:3]  | passed  | 3.26 seconds    |
+./spec/views/splah_index_spec.rb[1:1:4]  | passed  | 0.47048 seconds |
+./spec/views/splah_index_spec.rb[1:1:5]  | passed  | 0.55965 seconds |
