@@ -11,7 +11,6 @@
   </div>
   <div class="form-row">
     <% @groups = Group.all %>
-    <%# <%= form.select :icon, ['noto:house-with-garden', 'emojione-v1:bus', 'emojione:pot-of-food', 'healthicons:electricity', 'map:insurance-agency', 'noto:health-worker-medium-light-skin-tone', 'logos:netflix-icon', 'flat-color-icons:debt', 'icon-park-solid:other'], {:include_blank => "-- Select --"}, required: true, class: "custom-select" %>
      <%= form.select(:group_id, @groups.map { |group| [group.name, group.id] }, {:include_blank => "-- Select --"}, {:class => "custom-select"}) %>
   </div>
   <div class="submit_button_container">
