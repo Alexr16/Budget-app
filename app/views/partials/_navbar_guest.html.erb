@@ -1,25 +1,36 @@
 <nav class="nav-bar">
-            <%# <div class="name">
-                
-            </div> %>
             <ul class="list">
+
+              <% if @group && @group.id && current_page?(new_user_group_expense_path(current_user, @group))%>
+                 <li class="item"><a href="<%= user_group_expenses_path(current_user, @group) %>"><span class="iconify" data-icon="akar-icons:arrow-left"></span></a></li>
+                  <li class="item">CREATE TRANSACTION</li>
+                   <li class="item"></li>
+               <% end %>
+
                <% if current_page?(root_path)%>
                   <li class="item"><a href="<%= root_path %>"><span class="iconify" data-icon="ant-design:menu-outlined"></span></a></li>
-                  <li class="item">TRANSACTIONS</li>
+                  <li class="item">Groups</li>
                   <li class="item"><a class="nav-link" href="#"><%= link_to destroy_user_session_path, method: :delete, class: 'link' do%>
                   <span class="iconify" data-icon="ri:logout-box-r-line"></span>
                   <%end%>
                   </a></li>
                <% end %>
                   
-               <% if current_page?(new_user_group_path(current_user))%>
+               <% if @group != nil && current_page?(new_user_group_path(current_user))%>
                  <li class="item"><a href="<%= root_path %>"><span class="iconify" data-icon="akar-icons:arrow-left"></span></a></li>
                   <li class="item">CREATE GROUP</li>
-                   <li class="item"><a class="nav-link" href="#"><%= link_to destroy_user_session_path, method: :delete, class: 'link' do%>
-                  <span class="iconify" data-icon="ri:logout-box-r-line"></span>
-                  <%end%>
-                  </a></li>
+                   <li class="item"></li>
                <% end %>
+
+                   <% if @group != nil && @group.id != nil && current_page?(user_group_expenses_path(current_user, @group))%>
+                 <li class="item"><a href="<%= root_path %>"><span class="iconify" data-icon="akar-icons:arrow-left"></span></a></li>
+                  <li class="item">Transactions</li>
+                   <li class="item"></li>
+               <% end %>
+
+            
+
+
             </ul>
 
             
