@@ -28,6 +28,17 @@
                    <li class="item"></li>
                <% end %>
 
+                <% if @group && @group.id && @expense && @expense.id && current_page?(edit_user_group_expense_path(current_user, @group, @expense))%>
+                 <li class="item"><a href="<%= user_group_expenses_path(current_user, @group) %>"><span class="iconify" data-icon="akar-icons:arrow-left"></span></a></li>
+                  <li class="item">EDIT TRANSACTION</li>
+                   <li class="item"></li>
+               <% end %>
+
+ <% if @group && @group.id && current_page?(edit_user_group_path(current_user, @group))%>
+                 <li class="item"><a href="<%= user_groups_path(current_user) %>"><span class="iconify" data-icon="akar-icons:arrow-left"></span></a></li>
+                  <li class="item">EDIT GROUP</li>
+                   <li class="item"></li>
+               <% end %>
             
 
 
