@@ -5,7 +5,14 @@
 
 ## Screenshot
 
-<img src="./BudgetApp.png">
+<img src="./images/BudgetApp.png">
+<img src="./images/Category.png">
+<img src="./images/Transactions.png">
+
+## Live Demo
+
+For a live demo
+- Heroku [click here]().
 
 ## Built With
 

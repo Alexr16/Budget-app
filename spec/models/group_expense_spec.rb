@@ -6,7 +6,7 @@ RSpec.describe GroupExpense, type: :model do
     @user.save
     @category = Group.new(name: 'Food', icon: 'emojione:pot-of-food', author_id: @user.id)
     @category.save
-    @expense = Expense.new(name: "Restaurant", amount: 200, author_id: @user.id, group_id: @category.id)
+    @expense = Expense.new(name: 'Restaurant', amount: 200, author_id: @user.id, group_id: @category.id)
     @expense.save
     @group_expense = GroupExpense.new(group_id: @category.id, expense_id: @expense.id)
     @group_expense.save

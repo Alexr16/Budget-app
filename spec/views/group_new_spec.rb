@@ -22,7 +22,7 @@ RSpec.describe 'Group new page', type: :system do
     end
 
     it 'Shows the selector' do
-        expect(page).to have_selector(".custom-select")
+      expect(page).to have_selector('.custom-select')
     end
 
     it 'Shows the add button' do

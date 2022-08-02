@@ -25,8 +25,8 @@ RSpec.describe 'Splash index page', type: :system do
     end
 
     it 'Redirects to the Sign up page when clicking on the Sign up button' do
-        click_link 'SIGN UP'
-        expect(current_path).to eq(new_user_registration_path)
+      click_link 'SIGN UP'
+      expect(current_path).to eq(new_user_registration_path)
     end
   end
 end

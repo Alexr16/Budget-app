@@ -7,8 +7,8 @@ RSpec.describe 'Expense index page', type: :system do
       @user = User.new(name: 'juan', email: 'juan@hotmail.com', password: '123456')
       @user.save!
       @category = Group.create(name: 'Food', icon: 'emojione:pot-of-food', author_id: @user.id)
-      @expense = Expense.create(name: "Restaurant", amount: 200, author_id: @user.id, group_id: @category.id)
-      @expense = Expense.create(name: "KFC", amount: 200, author_id: @user.id, group_id: @category.id)
+      @expense = Expense.create(name: 'Restaurant', amount: 200, author_id: @user.id, group_id: @category.id)
+      @expense = Expense.create(name: 'KFC', amount: 200, author_id: @user.id, group_id: @category.id)
       visit user_group_expenses_path(@user, @category)
       fill_in 'Email', with: 'juan@hotmail.com'
       fill_in 'Password', with: '123456'

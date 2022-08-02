@@ -27,7 +27,7 @@ RSpec.describe 'Group edit page', type: :system do
     end
 
     it 'Shows the Delete button' do
-        expect(page).to have_button('Delete')
-      end
+      expect(page).to have_button('Delete')
+    end
   end
 end
