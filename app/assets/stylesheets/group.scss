@@ -5,6 +5,7 @@ body {
     background-color: $body;
     color: $text;
 }
+
 .group-container {
     display: flex;
     align-items: center;
@@ -12,6 +13,15 @@ body {
     margin: 1rem;
     border: 1px solid $text3;
     padding: 00.5rem;
+}
+
+.group-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $text3;
+    padding: 0 0.5rem;
+    margin-top: -1rem;
 }
 
 .group-data {
@@ -54,6 +64,12 @@ body {
     justify-content: center;
     margin: 0;
     margin-top: 4rem;
+    width: 100%;
+}
+
+.bottom-btn {
+    position: fixed;
+    bottom: 0;
 }
 
 .button {
@@ -79,4 +95,11 @@ select {
     color: white;
     border-radius: 0;
     background-color: $second;
+  }
+
+  .links-btn {
+    margin-top: 1rem;
+    color: $text2;
+    font-size: 1rem;
+    width: 100%;
   }
