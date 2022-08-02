@@ -13,12 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css?family=proxima-nova:thin,extra-light,light,bold,100,200,300,400,500,600,700,800');
 
  @import './variables.scss';
 
 body {
   margin: 0;
   background-color: $body;
+  font-family: $proxima-nova;
 }
 
 a {
