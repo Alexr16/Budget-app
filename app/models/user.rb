@@ -7,4 +7,6 @@ class User < ApplicationRecord
     has_many :expenses, dependent: :destroy, foreign_key: 'author_id'
 
     validates :name, presence: true
+    validates :email, presence: true
+    validates :password, presence: true
 end
