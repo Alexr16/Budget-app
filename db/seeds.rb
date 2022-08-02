@@ -9,7 +9,15 @@
 #Users
 user1 = User.create(name: "jorge", email: "jorge@hotmail.com", password: "123456")
 #Category
-category1 = Group.create(name: 'House', icon: 'noto:house-with-garden', author_id: user1.id)
+category1 = Group.create(name: 'Housing', icon: 'noto:house-with-garden', author_id: user1.id)
+category2 = Group.create(name: 'Transportation', icon: 'emojione-v1:bus', author_id: user1.id)
+category3 = Group.create(name: 'Food', icon: 'emojione:pot-of-food', author_id: user1.id)
+category4 = Group.create(name: 'Utilities', icon: 'healthicons:electricity', author_id: user1.id)
+category5 = Group.create(name: 'Insurance', icon: 'map:insurance-agency', author_id: user1.id)
+category6 = Group.create(name: 'Medical & Healthcare ', icon: 'noto:health-worker-medium-light-skin-tone', author_id: user1.id)
+category7 = Group.create(name: 'Entertainment', icon: 'logos:netflix-icon', author_id: user1.id)
+category8 = Group.create(name: 'Debt', icon: 'flat-color-icons:debt', author_id: user1.id)
+category9 = Group.create(name: 'Other', icon: 'icon-park-solid:other', author_id: user1.id)
 #Expenses
 expense1 = Expense.create(name: "Rent", amount: 1000, author_id: user1.id, group_id: category1.id)
 
