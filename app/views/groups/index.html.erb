@@ -6,11 +6,18 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "group", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-  <h1>Groups</h1>
+    <% @groups.each do |group| %>
+        <%= render "partials/category_card", group: group %>
+    <% end %>
+    <div class="btn-container">
+    <%= link_to new_user_group_path(current_user), {:class => "links-btn"} do%>
+      <button class="button bottom-btn">New group</button>
+    <%end%>
+      </div>
   </body>
 </html>

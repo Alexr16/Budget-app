@@ -7,11 +7,17 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  authenticated :user do
+    root 'groups#index', as: :authenticated_root
+  end
 
-  root "expenses#index"
+  root "splash#index"
 
   resources :users, only: [:index] do
-    resources :groups, only: [:index]
-    resources :expenses, only: [:index]
+    resources :groups, only: [:index, :new, :create, :edit, :update, :destroy] do
+      resources :expenses, only: [:index, :new, :create, :edit, :update, :destroy]
+    end
   end
+
+  resources :splash, only: [:index]
 end
