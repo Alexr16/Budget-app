@@ -6,6 +6,7 @@ class ExpensesController < ApplicationController
       @group = @user.groups.find(params[:group_id])
       @expenses = @user.expenses.where(group_id: @group.id)
       @total_transactions = total_transactions
+      redirect_to user_group_expenses_path(current_user) unless User.find_by(id: params[:user_id]) == current_user
     end
 
     def new

@@ -3,6 +3,7 @@ class GroupsController < ApplicationController
     def index
       @user = current_user
       @groups = @user.groups
+      redirect_to user_groups_path(current_user) unless User.find_by(id: params[:user_id]) == current_user
     end
   
     def new
