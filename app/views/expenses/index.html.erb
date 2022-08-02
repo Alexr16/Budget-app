@@ -20,7 +20,7 @@
   </div>
 </div>
    <% @expenses.order(created_at: :desc).each do |expense| %>
-      <%= render "partials/expense_card", expense: expense %>
+    <%= render "partials/expense_card", expense: expense, group: expense.group_id  %>
     <% end %>
    <div class="btn-container">
     <%= link_to new_user_group_expense_path(current_user, @group), {:class => "links-btn"} do%>
