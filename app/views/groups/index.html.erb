@@ -12,9 +12,7 @@
 
   <body>
     <% @groups.each do |group| %>
-      <%= link_to user_group_expenses_path(current_user, group), {:class => "links"} do%>
         <%= render "partials/category_card", group: group %>
-      <% end %>
     <% end %>
     <div class="btn-container">
     <%= link_to new_user_group_path(current_user), {:class => "links-btn"} do%>
