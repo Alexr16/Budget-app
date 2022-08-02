@@ -4,4 +4,6 @@ class Group < ApplicationRecord
     has_many :group_expenses, dependent: :destroy
 
     validates :name, presence: true
+    validates :icon, presence: true
+    validates :author_id, presence: true
 end
