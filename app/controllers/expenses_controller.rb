@@ -30,6 +30,34 @@ class ExpensesController < ApplicationController
       end
     end
 
+    def destroy
+      @user = current_user
+      @group = @user.groups.find(params[:group_id])
+      @expense = @user.expenses.find(params[:id])
+      @expense.destroy
+      flash[:notice] = 'Transaction successfully deleted!'
+      redirect_to user_group_expenses_path(current_user, @group)
+    end
+
+    def edit
+      @user = current_user
+      @group = @user.groups.find(params[:group_id])
+      @expense = @user.expenses.find(params[:id])
+    end
+
+    def update
+      @user = current_user
+      @group = @user.groups.find(params[:group_id])
+      @expense = @user.expenses.find(params[:id])
+      if @expense.update(expense_params)
+        flash[:notice] = 'Transaction successfully updated!'
+        redirect_to user_group_expenses_path(current_user, @group)
+      else
+        flash[:notice] = 'Transaction not updated!'
+        render :edit, status: :unprocessable_entity
+      end
+    end
+
     def total_transactions
       @user = current_user
       @group = @user.groups.find(params[:group_id])
