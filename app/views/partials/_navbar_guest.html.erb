@@ -3,9 +3,25 @@
                 
             </div> %>
             <ul class="list">
-               <li class="item"><a href="<%= root_path %>"><span class="iconify" data-icon="ant-design:menu-outlined"></span></a></li>
+               <% if current_page?(root_path)%>
+                  <li class="item"><a href="<%= root_path %>"><span class="iconify" data-icon="ant-design:menu-outlined"></span></a></li>
                   <li class="item">TRANSACTIONS</li>
-                <li class="item"><a class="nav-link" href="#portfolio-form-link"><span class="iconify" data-icon="ri:logout-box-r-line"><%= link_to "", destroy_user_session_path, class: 'link'%></span></a></li>
-
+                  <li class="item"><a class="nav-link" href="#"><%= link_to destroy_user_session_path, method: :delete, class: 'link' do%>
+                  <span class="iconify" data-icon="ri:logout-box-r-line"></span>
+                  <%end%>
+                  </a></li>
+               <% end %>
+                  
+               <% if current_page?(new_user_group_path(current_user))%>
+                 <li class="item"><a href="<%= root_path %>"><span class="iconify" data-icon="akar-icons:arrow-left"></span></a></li>
+                  <li class="item">CREATE GROUP</li>
+                   <li class="item"><a class="nav-link" href="#"><%= link_to destroy_user_session_path, method: :delete, class: 'link' do%>
+                  <span class="iconify" data-icon="ri:logout-box-r-line"></span>
+                  <%end%>
+                  </a></li>
+               <% end %>
             </ul>
+
+            
+
 </nav>
