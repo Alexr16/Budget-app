@@ -20,4 +20,9 @@ category8 = Group.create(name: 'Debt', icon: 'flat-color-icons:debt', author_id:
 category9 = Group.create(name: 'Other', icon: 'icon-park-solid:other', author_id: user1.id)
 #Expenses
 expense1 = Expense.create(name: "Rent", amount: 1000, author_id: user1.id, group_id: category1.id)
-
+expense2 = Expense.create(name: "Paint", amount: 100, author_id: user1.id, group_id: category1.id)
+expense3 = Expense.create(name: "Restaurant", amount: 200, author_id: user1.id, group_id: category3.id)
+#Group Expenses
+group_expense1 = GroupExpense.create(group_id: category1.id, expense_id: expense1.id)
+group_expense2 = GroupExpense.create(group_id: category1.id, expense_id: expense2.id)
+group_expense3 = GroupExpense.create(group_id: category3.id, expense_id: expense3.id)
