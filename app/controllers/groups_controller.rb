@@ -1,7 +1,8 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
     def index
-      @groups = Group.all
+      @user = current_user
+      @groups = @user.groups
     end
   
     def new
@@ -10,11 +11,13 @@ class GroupsController < ApplicationController
 
     def create
       @user = current_user
-      @group = Group.new(group_params)
+      @group = @user.groups.new(group_params)
       @group.author_id = @user.id
       if @group.save
+        flash[:notice] = 'Group successfully created!'
         redirect_to user_groups_path(current_user)
       else
+        flash[:notice] = 'Group not created!'
         render :new
       end
     end
