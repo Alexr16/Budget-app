@@ -139,3 +139,9 @@ a:hover { color: #cfcfcf; }
   font-size: 1rem;
   color: #fff;
 }
+
+@media screen and (min-width: 769px) {
+  .field {
+    margin: 0 2rem;
+  }
+}
