@@ -18,8 +18,7 @@ class ExpensesController < ApplicationController
   def create
     @user = current_user
     @group = @user.groups.find_by(id: expense_params[:group_id])
-    @expense = @user.expenses.new(expense_params)
-    @expense.group_id = @group.id
+    @expense = @user.expenses.create(name: expense_params[:name], amount: expense_params[:amount], author_id: @user.id,group_id: expense_params[:group_id])
     @group_expense = @expense.group_expenses.new(group_id: @group.id, expense_id: @expense.id)
     if @expense.save && @group_expense.save
       flash[:notice] = 'Transaction successfully created!'
